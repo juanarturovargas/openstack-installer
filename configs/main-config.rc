@@ -31,12 +31,12 @@ dbinstall="yes"
 #
 # Access information for MySQL
 mysqldbadm="root"
-mysqldbpassword="P@ssw0rd"
+mysqldbpassword="welcome1"
 mysqldbport="3306"
 #
 # Access information for PostgreSQL
 psqldbadm="postgres"
-psqldbpassword="P@ssw0rd"
+psqldbpassword="welcome1"
 psqldbport="5432"
 #
 #
@@ -50,9 +50,10 @@ dbpopulate="yes"
 # no action is taken for database installation, creation or population.
 #
 # Here you define the database backend server IP address. You can use an IP or a FQDN:
-dbbackendhost="192.168.50.12"
+dbbackendhost="127.0.0.1"
 
-#
+
+############################################################################################
 # MESSAGE BROKER SECTION
 #
 # You must install the message broker in the controller or in the controller-compute but
@@ -62,7 +63,7 @@ dbbackendhost="192.168.50.12"
 messagebrokerinstall="yes"
 # The IP or FQDN of the message broker (always fill this, no matter if you are installing
 # a controller or a compute node).
-messagebrokerhost="192.168.50.12"
+messagebrokerhost="127.0.0.1"
 #
 # We currently support both rabbitmq and qpid as message brokers. Normally you'll prefer
 # our default: RabbitMQ. Change brokerflavor to "qpid" if you want to use qpid, or leave
@@ -71,12 +72,13 @@ messagebrokerhost="192.168.50.12"
 brokerflavor="rabbitmq"
 # Autentication information for the message broker
 brokeruser="openstack"
-brokerpass="P@ssw0rd"
+brokerpass="welcome1"
 # Virtual Host - Only for RabbitMQ - Please leave our default: "/openstack"
 # WARNING: Please always include the "/" at the beggining of the virtual host name
 brokervhost="/openstack"
+############################################################################################
 
-#
+#############################################################################################
 # OPENSTACK SERVICES DATABASE ACCESS INFORMATION
 #
 # Here we define the database name, database user and database user password.
@@ -85,41 +87,43 @@ brokervhost="/openstack"
 # Keystone:
 keystonedbname="keystonedb"
 keystonedbuser="keystonedbuser"
-keystonedbpass="P@ssw0rd"
+keystonedbpass="welcome1"
 # Glance
 glancedbname="glancedb"
 glancedbuser="glancedbuser"
-glancedbpass="P@ssw0rd"
+glancedbpass="welcome1"
 # Cinder
 cinderdbname="cinderdb"
 cinderdbuser="cinderdbuser"
-cinderdbpass="P@ssw0rd"
+cinderdbpass="welcome1"
 # Neutron
 neutrondbname="neutrondb"
 neutrondbuser="neutrondbuser"
-neutrondbpass="P@ssw0rd"
+neutrondbpass="welcome1"
 # Nova
 novadbname="novadb"
 novadbuser="novadbuser"
-novadbpass="P@ssw0rd"
+novadbpass="welcome1"
 # Horizon
 horizondbname="horizondb"
 horizondbuser="horizondbuser"
-horizondbpass="P@ssw0rd"
+horizondbpass="welcome1"
 # Heat
 heatdbname="heatdb"
 heatdbuser="heatdbuser"
-heatdbpass="P@ssw0rd"
+heatdbpass="welcome1"
 # Trove
 trovedbname="trovedb"
 trovedbuser="trovedbuser"
-trovedbpass="P@ssw0rd"
+trovedbpass="welcome1"
 # Sahara
 saharadbname="saharadb"
 saharadbuser="saharadbuser"
-saharadbpass="P@ssw0rd"
+saharadbpass="welcome1"
+####################################################################################
 
-#
+
+###################################################################################
 # OPENSTACK KEYSTONE
 #
 # In the following section we define keystone installation options
@@ -130,7 +134,7 @@ keystoneinstall="yes"
 #
 # Either controller or compute, put the IP or FQDN for the keystone host,
 # normally, the controller server.
-keystonehost="192.168.50.12"
+keystonehost="127.0.0.1"
 # Only if you are using MySQL as DB backend. If for any chance, you have multiple
 # keystone hosts, put here the IP address of the extra hosts, space separated.
 # Normally, this is not necessary unless your mysql service access policies are very
@@ -142,7 +146,7 @@ SERVICE_TOKEN="044cb8c9e4a00a418827"
 keystoneadminuser="admin"
 keystoneservicename="keystone"
 keystoneadminuseremail="admin@localhost"
-keystoneadminpass="P@ssw0rd"
+keystoneadminpass="welcome1"
 keystoneadmintenant="admin"
 keystoneservicestenant="services"
 keystonememberrole="_member_"
@@ -163,16 +167,16 @@ endpointsregion="RegionOne"
 # Extra Tenants: Those are sample tenants. The initial password will be
 # the tenant name, a dash, and the password supplied in the "extratenantbasepass" variable.
 # Sample:
-# extratenantbasepass=P@ssw0rd
+# extratenantbasepass=welcome1
 # tenant name: extra1
-# resulting password: extra1-P@ssw0rd
-extratenantbasepass="P@ssw0rd"
+# resulting password: extra1-welcome1
+extratenantbasepass="welcome1"
 extratenants="extra1 extra2 extra3"
 domainextratenants="localhost"
 # NOTE: Those extra tenants will be added to the "_member_" role. Also the domain
 # is the same for all and it's defined in the domainextratenants variable. You can later
 # change this in Horizon Dashboard.
-#
+##################################################################################
 
 
 #
@@ -185,10 +189,10 @@ domainextratenants="localhost"
 # Change the IP, password and e-mail accordingly to your installation scenario.
 #
 swiftinstall="no"
-swifthost="192.168.50.12"
+swifthost="127.0.0.1"
 swiftuser="swift"
 swiftsvce="swift"
-swiftpass="P@ssw0rd"
+swiftpass="welcome1"
 swiftemail="swift@localhost"
 #
 # Swift extra configuration
@@ -232,10 +236,10 @@ glanceinstall="yes"
 # you are installing the controller or a compute node. This is normally the controller
 # IP address or FQDN if you prefer to use DNS. Also, remember to change the password and
 # e-mail.
-glancehost="192.168.50.12"
+glancehost="127.0.0.1"
 glanceuser="glance"
 glancesvce="glance"
-glancepass="P@ssw0rd"
+glancepass="welcome1"
 glanceemail="glance@localhost"
 #
 # If you want, we can install the cirrus test images. They are very usefull in order to
@@ -258,11 +262,11 @@ cinderinstall="yes"
 # you are installing the controller or a compute node. This is normally the controller
 # IP address or FQDN if you prefer to use DNS. Also, remember to change the password and
 # e-mail.
-cinderhost="192.168.50.12"
+cinderhost="127.0.0.1"
 cinderuser="cinder"
 cindersvce="cinder"
 cindersvcev2="cinderv2"
-cinderpass="P@ssw0rd"
+cinderpass="welcome1"
 cinderemail="cinder@localhost"
 #
 # If you want to include the lvm backend, leave the following variable at "yes". Otherwise,
@@ -270,7 +274,7 @@ cinderemail="cinder@localhost"
 cinderconfiglvm="yes"
 # Our default is to use iscsi. Put here the iscsi server IP. It can be the one of the
 # controller, if you are using a LVM "cinder-volumes" inside the controller.
-cinder_iscsi_ip_address="192.168.50.12"
+cinder_iscsi_ip_address="127.0.0.1"
 cinderlvmname="cinder-volumes"
 # Only if you are using MySQL as DB backend. If for any chance, you have multiple
 # cinder hosts, put here the IP address of the extra hosts, space separated.
@@ -327,18 +331,18 @@ neutroninstall="yes"
 neutron_in_compute_node="no"
 #
 # The IP or FQDN of your neutron network node or controller
-neutronhost="192.168.50.12"
+neutronhost="127.0.0.1"
 #
 # If you are installing a compute node, the following variable must be set to the
 # server IP address (the server you are just installing). If you are installing a
 # neutron network node or an ALL-IN-ONE server, use the same IP of the neutronhost
 # variable.
-neutron_computehost="192.168.50.12"
+neutron_computehost="127.0.0.1"
 #
 # Here, you should chang the password and e-mail
 neutronuser="neutron"
 neutronsvce="neutron"
-neutronpass="P@ssw0rd"
+neutronpass="welcome1"
 neutronemail="neutron@localhost"
 # This is the most important part of your network configuration. Here, you must
 # select your vlan ranges and mappings. Please, ensure you understand OpenStack
@@ -350,7 +354,7 @@ network_vlan_ranges="public"
 integration_bridge="br-int"
 bridge_mappings="public:br-eth2"
 dhcp_domain="localdomain"
-metadata_shared_secret="P@ssw0rd"
+metadata_shared_secret="welcome1"
 # VM's Base Mac. Normally you should not need to change this
 basemacspec="fa:16:3e:00:00:00"
 # Lease duration in seconds
@@ -420,18 +424,18 @@ nova_in_compute_node="no"
 nova_without_compute="no"
 #
 # This is the IP of your nova control node, controller or ALL-IN-ONE server.
-novahost="192.168.50.12"
+novahost="127.0.0.1"
 #
 # If you are installing NOVA in a compute node, the following IP must be ser to the server IP. If you
 # are installing a nova control node, all-in-one or controller, the IP must be set as the same in
 # "novahost" variable.
-nova_computehost="192.168.50.12"
+nova_computehost="127.0.0.1"
 #
 # Here you normally only need to change the password and e-mail:
 novauser="nova"
 novasvce="nova"
 novaec2svce="ec2"
-novapass="P@ssw0rd"
+novapass="welcome1"
 novaemail="nova@localhost"
 # Only if you are using MySQL as DB backend. If for any chance, you have multiple
 # nova hosts, put here the IP address of the extra hosts, space separated.
@@ -450,9 +454,9 @@ cpu_allocation_ratio="16.0"
 # Options: vnc or spice. Default: vnc
 consoleflavor="vnc"
 # Spice Server: This is the IP of our controller, ALL-IN-ONE, or nova control node:
-spiceserver_controller_address="192.168.50.12"
+spiceserver_controller_address="127.0.0.1"
 # VNC Server: This is the IP of our controller, ALL-IN-ONE, or nova control node:
-vncserver_controller_address="192.168.50.12"
+vncserver_controller_address="127.0.0.1"
 # Keymap: User "us" or "es" here
 vnc_keymap="es"
 #
@@ -503,16 +507,16 @@ ceilometer_in_compute_node="no"
 ceilometer_without_compute="no"
 #
 # This is the IP of the ceilometer node host or controller.
-ceilometerhost="192.168.50.12"
+ceilometerhost="127.0.0.1"
 # Change the password and e-mail
 ceilometeruser="ceilometer"
 ceilometersvce="ceilometer"
-ceilometerpass="P@ssw0rd"
+ceilometerpass="welcome1"
 ceilometeremail="ceilometer@localhost"
 #
 # MongoDB access information. We recommend to leave this as it is.. Just change the IP.
 # The IP should be the one where the ceilometer node or controller is installed.
-mondbhost="192.168.50.12"
+mondbhost="127.0.0.1"
 mondbport="27017"
 mondbname="ceilometer"
 mondbuser="ceilometer"
@@ -542,15 +546,15 @@ mongodbttl="7776000"
 # if you want to install heat. Again: IN THE CONTROLLER !!!
 heatinstall="no"
 # The heat host IP: Normally, the controller IP
-heathost="192.168.50.12"
+heathost="127.0.0.1"
 # Change the password and email
 heatuser="heat"
 heatsvce="heat"
-heatpass="P@ssw0rd"
+heatpass="welcome1"
 heatemail="heat@localhost"
 heatcfnsvce="heat-cfn"
 stack_domain_admin="stack_domain_admin"
-stack_domain_admin_password="P@ssw0rd"
+stack_domain_admin_password="welcome1"
 stack_user_domain_name="heat_user_domain"
 heat_stack_user_role="heat_stack_user"
 heat_stack_owner="heat_stack_owner"
@@ -572,11 +576,11 @@ extraheathosts=""
 # IN THE CONTROLLER
 troveinstall="no"
 # The controller IP of course.... ;)
-trovehost="192.168.50.12"
+trovehost="127.0.0.1"
 # As usual, change the password and e-mail.
 troveuser="trove"
 trovesvce="trove"
-trovepass="P@ssw0rd"
+trovepass="welcome1"
 troveemail="trove@localhost"
 # If you want to use CINDER as Database storage backend, set the following variable to "yes".
 # if you let the variable as "no" (our default), trove will use locally base storage. This
@@ -610,11 +614,11 @@ extratrovehosts=""
 # sahara host
 saharainstall="no"
 # The controller IP or the IP of the dedicated sahara host.
-saharahost="192.168.50.12"
+saharahost="127.0.0.1"
 # Again, change the password and e-mail
 saharauser="sahara"
 saharasvce="sahara"
-saharapass="P@ssw0rd"
+saharapass="welcome1"
 saharaemail="sahara@localhost"
 # Only if you are using MySQL as DB backend. If for any chance, you have multiple
 # sahara hosts, put here the IP address of the extra hosts, space separated.
@@ -649,7 +653,7 @@ horizondbusage="yes"
 # Our timezone. Whatever timezone you use, please remember to escape the slash
 dashboard_timezone="America\/Caracas"
 # Your horizon server IP - normally the controller IP.
-horizonhost="192.168.50.12"
+horizonhost="127.0.0.1"
 # Only if you are using MySQL as DB backend. If for any chance, you have multiple
 # horizon hosts, put here the IP address of the extra hosts, space separated.
 # Normally, this is not necessary unless your mysql service access policies are very
