@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 # Unattended installer for OpenStack.
-# Reynaldo R. Martinez P.
-# E-Mail: TigerLinux@Gmail.com
+#
+#
 #
 # Variable 1: Disk usage (bytes) - Nova Instances
 # Variable 2: Disk usage (bytes) - Glance Images

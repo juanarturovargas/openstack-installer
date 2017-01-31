@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 # Unattended installer for OpenStack.
-# Reynaldo R. Martinez P.
-# E-Mail: TigerLinux@Gmail.com
+#
+#
 #
 # Main Installer Script
 # Version: 1.0.11.ub1404lts "Leopardus Pardalis"

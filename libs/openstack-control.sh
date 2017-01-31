@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 # Unattended installer for OpenStack. - Ubuntu Server 14.04lts
-# Reynaldo R. Martinez P.
-# E-Mail: TigerLinux@Gmail.com
+#
+#
 #
 # Service control script
 #

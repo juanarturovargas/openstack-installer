@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 # Unattended installer for OpenStack.
-# Reynaldo R. Martinez P.
-# E-Mail: TigerLinux@Gmail.com
+#
+#
 #
 # NOVA VM's controlled startup script
 #

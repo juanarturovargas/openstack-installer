@@ -4,8 +4,8 @@ SHELL=/bin/bash
 PATH=$PATH:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 #
 # Unattended installer for OpenStack.
-# Reynaldo R. Martinez P.
-# E-Mail: TigerLinux@Gmail.com
+#
+#
 #
 # Ceilometer expirer crontab
 #

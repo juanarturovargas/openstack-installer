@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 # Unattended installer for OpenStack.
-# Reynaldo R. Martinez P.
-# E-Mail: TigerLinux@Gmail.com
+#
+#
 #
 # This script list's to console all compute nodes and it's associated
 # instances

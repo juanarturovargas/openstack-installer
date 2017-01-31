@@ -2,8 +2,8 @@
 #
 #
 # Unattended installer for OpenStack.
-# Reynaldo R. Martinez P.
-# E-Mail: TigerLinux@Gmail.com
+#
+#
 #
 # Variable 1: % CPU "user"
 # Variable 2: % CPU "system"

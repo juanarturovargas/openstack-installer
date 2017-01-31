@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 # Unattended/SemiAutomatted OpenStack Installer
-# Reynaldo R. Martinez P.
-# E-Mail: TigerLinux@Gmail.com
+#
+#
 # OpenStack KILO for Ubuntu 14.04lts
 #
 #
