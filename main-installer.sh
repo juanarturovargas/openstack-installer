@@ -201,6 +201,7 @@ case $1 in
 	then
 		echo ""
 		echo "Installing OPENSTACK KEYSTONE"
+		echo "./modules/keystoneinstall.sh"
 
 		./modules/keystoneinstall.sh
 
