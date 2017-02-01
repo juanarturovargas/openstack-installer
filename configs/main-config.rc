@@ -50,7 +50,7 @@ dbpopulate="yes"
 # no action is taken for database installation, creation or population.
 #
 # Here you define the database backend server IP address. You can use an IP or a FQDN:
-dbbackendhost="127.0.0.1"
+dbbackendhost="10.2.1.7"
 
 
 ############################################################################################
@@ -63,7 +63,7 @@ dbbackendhost="127.0.0.1"
 messagebrokerinstall="yes"
 # The IP or FQDN of the message broker (always fill this, no matter if you are installing
 # a controller or a compute node).
-messagebrokerhost="127.0.0.1"
+messagebrokerhost="10.2.1.7"
 #
 # We currently support both rabbitmq and qpid as message brokers. Normally you'll prefer
 # our default: RabbitMQ. Change brokerflavor to "qpid" if you want to use qpid, or leave
@@ -134,7 +134,7 @@ keystoneinstall="yes"
 #
 # Either controller or compute, put the IP or FQDN for the keystone host,
 # normally, the controller server.
-keystonehost="127.0.0.1"
+keystonehost="10.2.1.7"
 # Only if you are using MySQL as DB backend. If for any chance, you have multiple
 # keystone hosts, put here the IP address of the extra hosts, space separated.
 # Normally, this is not necessary unless your mysql service access policies are very
@@ -189,7 +189,7 @@ domainextratenants="localhost"
 # Change the IP, password and e-mail accordingly to your installation scenario.
 #
 swiftinstall="no"
-swifthost="127.0.0.1"
+swifthost="10.2.1.7"
 swiftuser="swift"
 swiftsvce="swift"
 swiftpass="welcome1"
@@ -236,7 +236,7 @@ glanceinstall="yes"
 # you are installing the controller or a compute node. This is normally the controller
 # IP address or FQDN if you prefer to use DNS. Also, remember to change the password and
 # e-mail.
-glancehost="127.0.0.1"
+glancehost="10.2.1.7"
 glanceuser="glance"
 glancesvce="glance"
 glancepass="welcome1"
@@ -262,7 +262,7 @@ cinderinstall="yes"
 # you are installing the controller or a compute node. This is normally the controller
 # IP address or FQDN if you prefer to use DNS. Also, remember to change the password and
 # e-mail.
-cinderhost="127.0.0.1"
+cinderhost="10.2.1.7"
 cinderuser="cinder"
 cindersvce="cinder"
 cindersvcev2="cinderv2"
@@ -274,7 +274,7 @@ cinderemail="cinder@localhost"
 cinderconfiglvm="yes"
 # Our default is to use iscsi. Put here the iscsi server IP. It can be the one of the
 # controller, if you are using a LVM "cinder-volumes" inside the controller.
-cinder_iscsi_ip_address="127.0.0.1"
+cinder_iscsi_ip_address="10.2.1.7"
 cinderlvmname="cinder-volumes"
 # Only if you are using MySQL as DB backend. If for any chance, you have multiple
 # cinder hosts, put here the IP address of the extra hosts, space separated.
@@ -331,13 +331,13 @@ neutroninstall="yes"
 neutron_in_compute_node="no"
 #
 # The IP or FQDN of your neutron network node or controller
-neutronhost="127.0.0.1"
+neutronhost="10.2.1.7"
 #
 # If you are installing a compute node, the following variable must be set to the
 # server IP address (the server you are just installing). If you are installing a
 # neutron network node or an ALL-IN-ONE server, use the same IP of the neutronhost
 # variable.
-neutron_computehost="127.0.0.1"
+neutron_computehost="10.2.1.7"
 #
 # Here, you should chang the password and e-mail
 neutronuser="neutron"
@@ -424,12 +424,12 @@ nova_in_compute_node="no"
 nova_without_compute="no"
 #
 # This is the IP of your nova control node, controller or ALL-IN-ONE server.
-novahost="127.0.0.1"
+novahost="10.2.1.7"
 #
 # If you are installing NOVA in a compute node, the following IP must be ser to the server IP. If you
 # are installing a nova control node, all-in-one or controller, the IP must be set as the same in
 # "novahost" variable.
-nova_computehost="127.0.0.1"
+nova_computehost="10.2.1.7"
 #
 # Here you normally only need to change the password and e-mail:
 novauser="nova"
@@ -454,9 +454,9 @@ cpu_allocation_ratio="16.0"
 # Options: vnc or spice. Default: vnc
 consoleflavor="vnc"
 # Spice Server: This is the IP of our controller, ALL-IN-ONE, or nova control node:
-spiceserver_controller_address="127.0.0.1"
+spiceserver_controller_address="10.2.1.7"
 # VNC Server: This is the IP of our controller, ALL-IN-ONE, or nova control node:
-vncserver_controller_address="127.0.0.1"
+vncserver_controller_address="10.2.1.7"
 # Keymap: User "us" or "es" here
 vnc_keymap="es"
 #
@@ -507,7 +507,7 @@ ceilometer_in_compute_node="no"
 ceilometer_without_compute="no"
 #
 # This is the IP of the ceilometer node host or controller.
-ceilometerhost="127.0.0.1"
+ceilometerhost="10.2.1.7"
 # Change the password and e-mail
 ceilometeruser="ceilometer"
 ceilometersvce="ceilometer"
@@ -516,7 +516,7 @@ ceilometeremail="ceilometer@localhost"
 #
 # MongoDB access information. We recommend to leave this as it is.. Just change the IP.
 # The IP should be the one where the ceilometer node or controller is installed.
-mondbhost="127.0.0.1"
+mondbhost="10.2.1.7"
 mondbport="27017"
 mondbname="ceilometer"
 mondbuser="ceilometer"
@@ -546,7 +546,7 @@ mongodbttl="7776000"
 # if you want to install heat. Again: IN THE CONTROLLER !!!
 heatinstall="no"
 # The heat host IP: Normally, the controller IP
-heathost="127.0.0.1"
+heathost="10.2.1.7"
 # Change the password and email
 heatuser="heat"
 heatsvce="heat"
@@ -576,7 +576,7 @@ extraheathosts=""
 # IN THE CONTROLLER
 troveinstall="no"
 # The controller IP of course.... ;)
-trovehost="127.0.0.1"
+trovehost="10.2.1.7"
 # As usual, change the password and e-mail.
 troveuser="trove"
 trovesvce="trove"
@@ -614,7 +614,7 @@ extratrovehosts=""
 # sahara host
 saharainstall="no"
 # The controller IP or the IP of the dedicated sahara host.
-saharahost="127.0.0.1"
+saharahost="10.2.1.7"
 # Again, change the password and e-mail
 saharauser="sahara"
 saharasvce="sahara"
@@ -653,14 +653,14 @@ horizondbusage="yes"
 # Our timezone. Whatever timezone you use, please remember to escape the slash
 dashboard_timezone="America\/Caracas"
 # Your horizon server IP - normally the controller IP.
-horizonhost="127.0.0.1"
+horizonhost="10.2.1.7"
 # Only if you are using MySQL as DB backend. If for any chance, you have multiple
 # horizon hosts, put here the IP address of the extra hosts, space separated.
 # Normally, this is not necessary unless your mysql service access policies are very
 # strict.
 extrahorizonhosts=""
 # If you don't use the database, we'll use the "PLEASE-DONT-USE-THIS" option of memcached
-memcached_spec="memcached:\/\/127.0.0.1:11211\/"
+memcached_spec="memcached:\/\/10.2.1.7:11211\/"
 # Finally, the branding name. Set as your personal or corporate preference
 brandingname="OpenStack Private Cloud"
 
