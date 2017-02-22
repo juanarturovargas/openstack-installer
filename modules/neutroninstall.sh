@@ -576,9 +576,9 @@ sync
 sleep 2
 sync
 
-#
+##########################################################################################
 # LBaaS configuration
-#
+##########################################################################################
  
 echo "#" >> /etc/neutron/lbaas_agent.ini
 echo "#" >> /etc/neutron/neutron_lbaas.conf
@@ -599,7 +599,10 @@ chown neutron.neutron /etc/neutron/neutron_lbaas.conf
 sync
 sleep 2
 sync
- 
+
+########################################################################################
+
+
 mkdir -p /etc/neutron/plugins/services/agent_loadbalancer
 cp -v /etc/neutron/lbaas_agent.ini /etc/neutron/plugins/services/agent_loadbalancer/
 chown root.neutron /etc/neutron/plugins/services/agent_loadbalancer/lbaas_agent.ini
@@ -682,7 +685,8 @@ echo ""
 #
 
 echo "Starting Neutron"
- 
+
+# If neutron is installed in compute node
 if [ $neutron_in_compute_node == "yes" ]
 then
 	stop neutron-server
@@ -702,8 +706,8 @@ then
 
         if [ $vpnaasinstall == "yes" ]
         then
-                stop neutron-vpn-agent
-		echo 'manual' > /etc/init/neutron-vpn-agent.override
+            stop neutron-vpn-agent
+			echo 'manual' > /etc/init/neutron-vpn-agent.override
         fi
 
 	if [ $neutronmetering == "yes" ]
@@ -715,22 +719,18 @@ then
 	start neutron-plugin-openvswitch-agent
 	start neutron-l3-agent
 	start neutron-metadata-agent
+	
 else
 	start neutron-server
-
 	start neutron-dhcp-agent
-
 	start neutron-l3-agent
-
 	start neutron-lbaas-agent
-
 	start neutron-metadata-agent
-
-
-        if [ $vpnaasinstall == "yes" ]
-        then
-                start neutron-vpn-agent
-        fi
+	
+    if [ $vpnaasinstall == "yes" ]
+    then
+    	start neutron-vpn-agent
+    fi
 
 	if [ $neutronmetering == "yes" ]
 	then

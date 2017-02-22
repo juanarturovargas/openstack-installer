@@ -1,6 +1,6 @@
 Unattended installer for OpenStack.
-Reynaldo R. Martinez P.
-E-Mail: TigerLinux@Gmail.com
+
+
 
 SSH/ADMIN PASSWORD METADATA-BASED SCRIPT AUTOCONFIGURATOR
 

@@ -7,8 +7,11 @@
 # Service control script
 #
 
+#Set path 
 PATH=$PATH:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 
+
+#Validate if the file control config exist ############################
 if [ ! -d /etc/openstack-control-script-config ]
 then
 	echo ""
@@ -17,6 +20,8 @@ then
 	echo ""
 	exit 0
 fi
+#######################################################################
+
 
 if [ -f /etc/openstack-control-script-config/nova-console-svc ]
 then

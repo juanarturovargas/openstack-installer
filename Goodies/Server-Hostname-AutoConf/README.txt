@@ -1,6 +1,6 @@
 DNS-BASED HOSTNAME AUTOCONFIG SCRIPT
 For VM's running: Centos 5, Centos 6, Centos 7, Debian 6, Debian 7, Debian 8 and Ubuntu Server 14.04lts
-Reynaldo R. Martinez P.
+
 TigerLinux@gmail.com
 
 This script can be used to auto-configure the hostname of the virtual machine, provided that the

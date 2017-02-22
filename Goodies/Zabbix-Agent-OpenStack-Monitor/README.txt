@@ -1,5 +1,5 @@
 OPENSTACK VARIABLES FOR ZABBIX
-Reynaldo R. Martinez P.
+
 TigerLinux@gmail.com
 
 In adition to SNMP, you can include the same variables in zabbix. For this purpose,
